@@ -12,7 +12,7 @@
 </p>
 
 
- <img src="Milbus Framework.png" alt="Rust"/>
+ <img src="Milbus Framework.png" style="width:200" height:200 alt="Rust"/>
 <p align="center">
   <em>A modular Rust framework for avionics bus simulation, protocol analysis, virtual communication environments, and controlled fault-injection testing.</em>
 </p>
