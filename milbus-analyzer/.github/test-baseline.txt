@@ -1,0 +1,8 @@
+# Test-count baseline (Phase 0 gate).
+#
+# `scripts/check-test-count.sh` fails when the number of passing tests drops
+# below this number, so a phase that silently removes or breaks tests is caught
+# in CI. Phase work is expected to *raise* the count; when a phase
+# intentionally replaces tests, update this file in the same change and say so
+# in the commit message.
+49

@@ -1,0 +1,15 @@
+[package]
+name = "protocol-core"
+version.workspace = true
+edition.workspace = true
+description = "MIL-STD-1553B, ARINC 429, and Link 16 encoding/decoding logic"
+
+[dependencies]
+mil_std_1553b = { workspace = true }
+arinc429 = { workspace = true }
+thiserror = { workspace = true }
+serde = { workspace = true }
+chrono = { workspace = true }
+
+[lints]
+workspace = true

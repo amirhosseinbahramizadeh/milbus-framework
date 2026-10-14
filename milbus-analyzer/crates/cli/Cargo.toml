@@ -1,0 +1,28 @@
+[package]
+name = "cli"
+version.workspace = true
+edition.workspace = true
+description = "milbus-analyzer binary entry point"
+
+[lib]
+name = "cli"
+path = "src/lib.rs"
+
+[[bin]]
+name = "milbus-analyzer"
+path = "src/main.rs"
+
+[dependencies]
+protocol-core = { workspace = true }
+simulator = { workspace = true }
+tui = { workspace = true }
+clap = { workspace = true }
+serde_json = { workspace = true }
+thiserror = { workspace = true }
+tokio = { workspace = true, features = ["rt-multi-thread", "macros", "sync", "time"] }
+
+[dev-dependencies]
+tokio = { workspace = true, features = ["macros", "rt", "sync", "time", "test-util"] }
+
+[lints]
+workspace = true
