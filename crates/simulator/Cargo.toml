@@ -1,0 +1,19 @@
+[package]
+name = "simulator"
+version.workspace = true
+edition.workspace = true
+description = "Virtual bus and device simulation"
+
+[dependencies]
+protocol-core = { workspace = true }
+serde = { workspace = true }
+thiserror = { workspace = true }
+tokio = { workspace = true, features = ["rt", "sync", "time"] }
+chrono = { workspace = true }
+arinc429 = { workspace = true }
+
+[dev-dependencies]
+tokio = { workspace = true, features = ["macros", "rt", "sync", "test-util", "time"] }
+
+[lints]
+workspace = true

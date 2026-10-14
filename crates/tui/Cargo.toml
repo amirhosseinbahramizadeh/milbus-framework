@@ -1,0 +1,22 @@
+[package]
+name = "tui"
+version.workspace = true
+edition.workspace = true
+description = "Ratatui-based terminal interface"
+
+[dependencies]
+protocol-core = { workspace = true }
+simulator = { workspace = true }
+ratatui = { workspace = true }
+serde = { workspace = true }
+tokio = { workspace = true, features = ["macros", "sync"] }
+crossterm = { version = "0.29", features = ["event-stream"] }
+futures = "0.3"
+tracing = { workspace = true }
+
+[dev-dependencies]
+chrono = { workspace = true }
+tokio = { workspace = true, features = ["macros", "rt", "sync", "time"] }
+
+[lints]
+workspace = true

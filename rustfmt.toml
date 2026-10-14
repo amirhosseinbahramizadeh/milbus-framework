@@ -1,0 +1,6 @@
+# rustfmt configuration for the milbus-analyzer workspace.
+#
+# Keeping the defaults (100-column width, edition 2021 style) so that
+# `cargo fmt --all --check` is a stable gate in CI.
+
+edition = "2021"
