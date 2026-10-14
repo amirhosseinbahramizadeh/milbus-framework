@@ -11,6 +11,8 @@
   <img src="https://img.shields.io/badge/STATUS-ACTIVE-556B2F?style=for-the-badge" alt="Active Development"/>
 </p>
 
+
+ <img src="Milbus Framework.png" alt="Rust"/>
 <p align="center">
   <em>A modular Rust framework for avionics bus simulation, protocol analysis, virtual communication environments, and controlled fault-injection testing.</em>
 </p>
