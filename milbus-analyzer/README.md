@@ -15,7 +15,7 @@ TUI, headless bus-attack injection, and JSON frame capture/replay.
 Requires a stable Rust toolchain (edition 2021).
 
 ```bash
-git clone <repository-url>
+git clone <https://github.com/amirhosseinbahramizadeh/milbus-framework>
 cd milbus-analyzer
 cargo build --release
 ```
