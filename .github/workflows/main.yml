@@ -1,0 +1,40 @@
+name: Extract milbus-analyzer
+
+on:
+  workflow_dispatch:
+
+jobs:
+  extract:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Extract zip
+        run: |
+          unzip -o milbus-analyzer.zip -d /tmp/milbus-extract
+
+      - name: Copy extracted project into repo root
+        run: |
+          shopt -s dotglob
+          cp -a /tmp/milbus-extract/milbus-analyzer/. .
+          git status --short
+
+      - name: Commit and push extracted files
+        run: |
+          git config user.name "github-actions[bot]"
+          git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
+
+          git checkout -B extract/milbus-analyzer
+          git add .
+          if git diff --cached --quiet; then
+            echo "No changes to commit"
+            exit 0
+          fi
+          git commit -m "Extract milbus-analyzer archive"
+          git push origin HEAD:extract/milbus-analyzer
